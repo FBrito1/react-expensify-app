@@ -4,16 +4,16 @@ import toJSON from 'enzyme-to-json';
 import expenses from '../fixtures/expenses';
 import { EditExpensePage } from '../../components/EditExpensePage';
 
-let editExpense, wrapper, history, removeExpense;
+let editExpense, wrapper, history, startRemoveExpense;
 
 beforeEach(() => {
     editExpense = jest.fn();
-    removeExpense = jest.fn();
+    startRemoveExpense = jest.fn();
     history = { push: jest.fn() };
     wrapper = shallow(
     <EditExpensePage 
         editExpense={editExpense} 
-        removeExpense={removeExpense}
+        startRemoveExpense={startRemoveExpense}
         history={history}
         expense={expenses[0]}  
     />);
@@ -37,5 +37,5 @@ test('should gandle remove expense', () => {
     wrapper.find('button').simulate('click');
 
     expect(history.push).toHaveBeenLastCalledWith('/');
-    expect(removeExpense).toHaveBeenLastCalledWith({ id: expenses[0].id });
+    expect(startRemoveExpense).toHaveBeenLastCalledWith({ id: expenses[0].id });
 });
