@@ -46,9 +46,7 @@ test ('should add an expense', () => {
     expect(state).toEqual([...expenses, expense]);
 });
 
-// should add an expense
 
-// should edit an expense
 
 test('should edit an expense', () => {
     const amount = 12220;
