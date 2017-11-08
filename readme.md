@@ -1,7 +1,5 @@
-#GIT Commands
+Expensify App.
 
-git init - Create a new git repo
-git status - View the changes o your project code
-git add - Add files to staging area
-git commit - Creates a new commit with files from staging area
-git log - View recent commits
+Made with React + Firebase
+
+Check out the live version: https://react-expensify-f15.herokuapp.com/
